@@ -1,0 +1,35 @@
+<div class="container">
+   <div class="row" style="padding-top: 10px;">
+      <div class="col-lg-12">
+          <div class="alert alert-warning" *ngIf=errorMsg>
+              <p>Invalid Credentials! Please Enter a Valid Username and Password!</p>
+          </div>
+      </div>
+  </div>
+    <div class="row">
+       <div class="col-lg-12 " style="padding-top: 20px;">
+          <div class="container box" >
+             <div class="row">
+                <div class="col-12" >
+                                     <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" 
+                                           class="form-signin">
+                                           <div class="form -group">
+                                     <h2 class="form-signin-heading">Please sign in</h2>
+                                     <label class="form-group">Username:
+                                       <input type="text" id="username" class="form-control" name="username"
+                                           placeholder="Username"   formControlName="userName" autofocus>
+                                   </label>
+                                   <label class="form-group">Password:
+                                    <input type="password" id="password" class="form-control" name="password"
+                                        placeholder="Password"   formControlName="password" >
+                                </label>
+                                          
+                                     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                    </div>
+                                     </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

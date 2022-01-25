@@ -1,0 +1,21 @@
+
+
+h2{
+    color: rgb(20, 47, 82) !important;
+}
+
+.heads
+{
+    font-size: 30px;
+    font-style:initial;
+    color: rgb(55, 44, 80);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+.output
+{
+    color: rgb(190, 70, 34);
+    border-radius: 10px;
+    border-width: thick !important;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

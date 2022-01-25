@@ -1,0 +1,80 @@
+<form [formGroup]="newForm">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <span class="heads">Pensioner Details</span>
+          <div class="form-group">
+            <label for="name">Name</label><br>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="aadharNo">Aadhar No</label><br>
+            <input type="text" class="form-control" id="aadharNo" formControlName="aadharNo">
+          </div>
+          <!-- <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="text" class="form-control" id="email" formControlName="email">
+          </div> -->
+          <div class=form-row>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="text" class="form-control" id="dob" formControlName="dob">
+          </div>
+          <div class="form-group">
+
+            <label for="pensionClassification">Self/Family</label><br>
+            <div class="form-check-inline">
+              <label for="pensionClassification" class="form-check-label">
+                <input type="radio" value="Self" class="form-check-input" id="pensionClassification"
+                  formControlName="pensionClassification">
+                <span>Self</span>
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label for="pensionClassification" class="form-check-label">
+                <input type="radio" value="Family" class="form-check-input" id="pensionClassification"
+                  formControlName="pensionClassification">
+                <span>Family</span>
+              </label>
+            </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <label for="pan">PAN No</label><br>
+            <input type="text" class="form-control" id="pan" formControlName="pan">
+          </div>
+          
+            
+          <div class="form-group">
+            <label for="salaryEarned">Salary Earned</label>
+            <input type="text" class="form-control" id="salaryEarned" formControlName="salaryEarned">
+          </div>
+          <div class="form-group">
+            <label for="allowances">Allowances</label>
+            <input type="text" class="form-control" id="allowances" formControlName="allowances">
+          </div>
+    </div>
+    <div class="col-sm">
+      <span class="heads">Bank Details</span>
+        <div class="form-group">
+          <label for="bankName">Bank Name</label>
+          <input type="text" class="form-control" id="bankName" formControlName="bankName">
+        </div>
+        <div class="form-group">
+          <label for="bankAccount">Account Number</label>
+          <input type="text" class="form-control" id="bankAccount" formControlName="bankAccount">
+        </div>
+        <div class="form-group">
+          <label for="sector">Sector</label><br>
+          <input type="text" class="form-control" id="sector" formControlName="sector">
+        </div>
+          <div class="form-group border output">
+            <label for="pensionAmount"><b>Pension Amount</b></label>
+            <input type="text" class="form-control" id="pensionAmount" formControlName="pensionAmount">
+            <label for="serviceCharge"><b>Bank Service Charge</b></label>
+            <input type="text" class="form-control" id="serviceCharge" formControlName="serviceCharge">
+          </div>
+    </div>
+  </div>
+</div>
+</form>

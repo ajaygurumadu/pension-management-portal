@@ -1,0 +1,46 @@
+server:
+  port: 9191
+
+
+#spring:
+#  application:#    name: API-GATEWAY
+#  cloud:
+#    gateway:#      routes:#      - id: PENSIONER-DETAIL-MICROSERVICE
+#        uri: lb://PENSIONER-DETAIL-MICROSERVICE
+#        predicates:#        - Path=/pensioner/**
+#        filters:
+#          - name: CircuitBreaker
+#            args:
+#              name: PENSIONER-DETAIL-MICROSERVICE
+#              fallbackuri: forward:/pensionerServiceFallBack
+#      - id: PROCESS-PENSION-MICROSERVICE
+#        uri: lb://PROCESS-PENSION-MICROSERVICE
+#        predicates:
+#        - Path=/pension/**
+#        filters:
+#          - name: CircuitBreaker
+#            args:
+#              name: PROCESS-PENSION-MICROSERVICE
+#              fallbackuri: forward:/processPensionerServiceFallBack
+#      - id: AUTH-SERVICE
+#        uri: lb://JWT-AUTH
+#        predicates:
+#        - Path=/authenticate/**
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation: 
+          thread:
+            timeoutInMilliSeconds:4000
+
+
+
+
+management:  endpoints:    web:      exposure:        include: hystrix.stream
+              
+        
+
+
+  

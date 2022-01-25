@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#284E75;">
+    <a class="navbar-brand" href="">P<span style="color:black;">MP</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="userCheck"  href="/">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link btn-danger" *ngIf="userCheck"  (click)="logout()">Logout<span class="sr-only"></span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
